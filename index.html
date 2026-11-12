@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Documentation Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--Side Bar content-->
+
+    <nav id="navbar">
+      <header>
+        CSS Documentation Page
+      </header>
+
+      <a class="nav-link" href="#home">Home</a>
+      <a class="nav-link" href="#selectors">Selectors</a>
+      <a class="nav-link" href="#colors-and-backgrounds"
+        >Colors and Backgrounds</a
+      >
+      <a class="nav-link" href="#the-box-model">The Box Model</a>
+      <a class="nav-link" href="#typography">Typography</a>
+      <a class="nav-link" href="#positioning">Positioning</a>
+      <a class="nav-link" href="#flexbox">Flexbox</a>
+      <a class="nav-link" href="#css-grid">CSS Grid</a>
+      <a class="nav-link" href="#transitions">Transitions</a>
+      <a class="nav-link" href="#animations">Animations</a>
+      <a class="nav-link" href="#media-queries">Media Queries</a>
+      <a class="nav-link" href="#css-variables">CSS Variables</a>
+    </nav>
+
+    <!--Main content-->
+
+    <main id="main-doc">
+      <section class="main-section" id="home">
+        <header>
+          Home
+        </header>
+        <p>
+          Welcome to my personal CSS Cheatsheet. Here you can quickly look up
+          syntax, layout rules, and styling tricks for modern web design.
+        </p>
+        <h2>What is CSS?</h2>
+        <p>
+          <strong>CSS (Cascading Style Sheets)</strong> is the language used to
+          design and style web pages. While HTML creates the basic structure of
+          a website, CSS controls how it looks—including colors, fonts, spacing,
+          and page layouts.
+        </p>
+
+        <h3>3 Ways to Add CSS</h3>
+        <p>You can connect CSS to your HTML document in three ways:</p>
+        <ul class="ways-list">
+          <li>
+            <strong>Inline CSS:</strong> Written directly inside an HTML tag
+            using the <code class="inline-code">style</code> attribute.
+          </li>
+          <li>
+            <strong>Internal CSS:</strong> Written inside a
+            <code class="inline-code">&lt;style&gt;</code> tag in the
+            <code class="inline-code">&lt;head&gt;</code> section of an HTML
+            file.
+          </li>
+          <li>
+            <strong>External CSS (Best Practice):</strong> Written in a separate
+            <code class="inline-code">.css</code> file and linked using the
+            <code class="inline-code">&lt;link&gt;</code> tag.
+          </li>
+        </ul>
+
+        <h3>Real-Life Example: Building a House</h3>
+        <p>Think of building a website like building a house:</p>
+        <ul>
+          <li>
+            <strong>HTML</strong> is the bricks, cement, and walls (the basic
+            structure).
+          </li>
+          <li>
+            <strong>CSS</strong> is the paint, tiles, and decoration (what makes
+            it look beautiful).
+          </li>
+        </ul>
+
+        <h3>About This Cheat Sheet</h3>
+        <p>
+          This guide is a quick reference for essential CSS properties,
+          selectors, and layout rules. It is designed to help you write clean
+          styles faster without memorizing every rule.
+        </p>
+
+        <p>
+          Click any topic on the left menu to jump directly to examples and
+          property breakdowns.
+        </p>
+        <div class="footer">
+            
+            <p>Made with ❤️ for Web Developers | CSS Cheat Sheet</p>
+        </div>
+      </section>
+
+      <section class="main-section" id="selectors">
+        <header>
+          Selectors
+        </header>
+        <p>
+          CSS selectors are patterns used to select the elements you want to
+          style. They can target elements by tag name, class, ID, attributes,
+          and more. Selectors are the foundation of CSS, allowing you to apply
+          styles to specific parts of your HTML.
+        </p>
+
+        <h3>Common Selectors</h3>
+        <ul>
+          <li>
+            <strong>Element Selector:</strong> Selects all elements of a type.
+            Example: <code>p { color: blue; }</code>
+          </li>
+          <li>
+            <strong>Class Selector:</strong> Selects elements with a specific
+            class. Example:
+            <code>.highlight { background-color: yellow; }</code>
+          </li>
+          <li>
+            <strong>ID Selector:</strong> Selects a single element with a
+            specific ID. Example: <code>#header { font-size: 24px; }</code>
+          </li>
+          <li>
+            <strong>Attribute Selector:</strong> Selects elements based on an
+            attribute value. Example:
+            <code>[type="text"] { border: 1px solid #ccc; }</code>
+          </li>
+        </ul>
+
+        <h3>Pseudo-classes and Pseudo-elements</h3>
+        <p>
+          Pseudo-classes and pseudo-elements allow you to style elements based
+          on their state or position.
+        </p>
+        <ul>
+          <li>
+            <strong>:hover</strong> - Styles an element when the user moves
+            their mouse pointer over it.
+            <br />
+            <strong>Example:</strong>
+            <code>button:hover { background-color: yellow; }</code>
+            <br />
+            <em
+              >(Explanation: When a user places their mouse cursor over a
+              <code>&lt;button&gt;</code>, its background color will immediately
+              change to <strong>yellow</strong>.)</em
+            >
+          </li>
+
+          <li>
+            <strong>:active</strong> - Styles an element at the exact moment it
+            is being clicked.
+            <br />
+            <strong>Example:</strong>
+            <code>button:active { transform: scale(0.95); }</code>
+            <br />
+            <em
+              >(Explanation: While the user is pressing down the mouse button on
+              a <code>&lt;button&gt;</code>, it will slightly shrink to give a
+              <strong>real click effect</strong>.)</em
+            >
+          </li>
+
+          <li>
+            <strong>:focus</strong> - Styles an input field when the user clicks
+            inside it or selects it using the Tab key.
+            <br />
+            <strong>Example:</strong>
+            <code>input:focus { border-color: blue; }</code>
+            <br />
+            <em
+              >(Explanation: When a user clicks inside an
+              <code>&lt;input&gt;</code> box to type, its border will turn
+              <strong>blue</strong>.)</em
+            >
+          </li>
+
+          <li>
+            <strong>:nth-child(n)</strong> - Selects and styles a specific child
+            element based on its position (number) inside a parent.
+            <br />
+            <strong>Example:</strong>
+            <code>li:nth-child(2) { font-weight: bold; }</code>
+            <br />
+            <em
+              >(Explanation: If you have multiple <code>&lt;li&gt;</code> tags
+              inside a <code>&lt;ul&gt;</code>, this CSS will apply
+              <strong>only to the 2nd <code>&lt;li&gt;</code> item</strong
+              >.)</em
+            >
+          </li>
+
+          <li>
+            <strong>:last-child</strong> - Selects and styles only the very last
+            child element inside a parent.
+            <br />
+            <strong>Example:</strong> <code>li:last-child { color: red; }</code>
+            <br />
+            <em
+              >(Explanation: If you have multiple <code>&lt;li&gt;</code> tags
+              inside a <code>&lt;ul&gt;</code>, this CSS will apply
+              <strong>only to the very last <code>&lt;li&gt;</code> item</strong
+              >.)</em
+            >
+          </li>
+
+          <li>
+            <strong>:not(selector)</strong> - Selects and styles every element
+            except the ones that match the specified selector.
+            <br />
+            <strong>Example:</strong>
+            <code>li:not(.active) { color: gray; }</code>
+            <br />
+            <em
+              >(Explanation: If you have multiple <code>&lt;li&gt;</code> tags
+              inside a <code>&lt;ul&gt;</code>, this CSS will apply to
+              <strong
+                >all <code>&lt;li&gt;</code> items except the one with
+                <code>class="active"</code></strong
+              >.)</em
+            >
+          </li>
+
+          <li>
+            <strong>:first-of-type</strong> - Selects and styles the very first
+            element of a specific tag type inside a parent.
+            <br />
+            <strong>Example:</strong>
+            <code>p:first-of-type { color: green; }</code>
+            <br />
+            <em
+              >(Explanation: If a <code>&lt;div&gt;</code> has an
+              <code>&lt;h1&gt;</code> followed by multiple
+              <code>&lt;p&gt;</code> tags, this CSS will apply
+              <strong>only to the very first <code>&lt;p&gt;</code> tag</strong
+              >, even if it is not the first child overall.)</em
+            >
+          </li>
+
+          <li>
+            <strong>:last-of-type</strong> - Selects and styles the very last
+            element of a specific tag type inside a parent.
+            <br />
+            <strong>Example:</strong>
+            <code>p:last-of-type { color: purple; }</code>
+            <br />
+            <em
+              >(Explanation: If a <code>&lt;div&gt;</code> has multiple
+              <code>&lt;p&gt;</code> tags followed by a
+              <code>&lt;button&gt;</code>, this CSS will apply
+              <strong>only to the very last <code>&lt;p&gt;</code> tag</strong>,
+              even if it is not the last child overall.)</em
+            >
+          </li>
+
+          <li>
+            <strong>:first-child</strong> - Selects and styles only the very
+            first child element inside a parent.
+            <br />
+            <strong>Example:</strong>
+            <code>li:first-child { color: blue; }</code>
+            <br />
+            <em
+              >(Explanation: If you have multiple <code>&lt;li&gt;</code> tags
+              inside a <code>&lt;ul&gt;</code>, this CSS will apply
+              <strong
+                >only to the very first <code>&lt;li&gt;</code> item</strong
+              >.)</em
+            >
+          </li>
+
+          <li>
+            <strong>::before</strong> - Adds extra content (like text, icons, or
+            shapes) right before an element's actual content.
+            <br />
+            <strong>Example:</strong>
+            <code>p::before { content: "Note: "; color: red; }</code>
+            <br />
+            <em
+              >(Explanation: If you have a <code>&lt;p&gt;</code> tag, this CSS
+              will automatically place the red word <strong>"Note: "</strong> in
+              front of your paragraph text without changing the HTML.)</em
+            >
+          </li>
+
+          <li>
+            <strong>::after</strong> - Adds extra content (like text, icons, or
+            shapes) right after an element's actual content.
+            <br />
+            <strong>Example:</strong>
+            <code>p::after { content: " (Read more)"; color: blue; }</code>
+            <br />
+            <em
+              >(Explanation: If you have a <code>&lt;p&gt;</code> tag, this CSS
+              will automatically place the blue text
+              <strong>" (Read more)"</strong> at the very end of your paragraph
+              without changing the HTML.)</em
+            >
+          </li>
+
+          <li>
+            <strong>::first-letter</strong> - Styles only the very first letter
+            of a block of text.
+            <br />
+            <strong>Example:</strong>
+            <code>p::first-letter { font-size: 32px; color: red; }</code>
+            <br />
+            <em
+              >(Explanation: In any <code>&lt;p&gt;</code> paragraph, only the
+              <strong>very first alphabet</strong> will become large and red,
+              just like in a newspaper or storybook.)</em
+            >
+          </li>
+
+          <li>
+            <strong>::placeholder</strong> - Styles the hint text inside an
+            input field before the user types anything.
+            <br />
+            <strong>Example:</strong>
+            <code>input::placeholder { color: gray; font-style: italic; }</code>
+            <br />
+            <em
+              >(Explanation: The temporary hint text inside an
+              <code>&lt;input&gt;</code> box (like "Enter your name") will
+              appear in <strong>gray and italic</strong>.)</em
+            >
+          </li>
+        </ul>
+      </section>
+
+    <section class="main-section" id="colors-and-backgrounds">
+        <header>
+          Colors and Backgrounds
+        </header>
+        <p>
+          CSS allows you to set colors for text, backgrounds, borders, and more.
+          You can use color names, HEX codes, RGB values, or HSL values.
+        </p>
+
+        <h3>Text Color</h3>
+        <p>Use the <code>color</code> property to change text color.</p>
+        <pre><code>p { color: blue; }</code></pre>
+<h3>Background Color</h3>
+  <p>CSS background properties let you add solid colors, images, or smooth color gradients behind any HTML element.</p>
+
+  <!-- 1. Background Color -->
+  <p><strong>1. Background Color:</strong> Use <code>background-color</code> to fill an element with a solid color. You can use color names, HEX codes, or RGB values.</p>
+  <pre><code>.box {
+  background-color: #1e293b;  /* Sets a dark blue-grey background color */
+}</code></pre>
+
+  <!-- 2. Background Image -->
+  <p><strong>2. Background Image:</strong> Use <code>background-image</code> with <code>url()</code> to place a picture behind an element.</p>
+  <pre><code>.hero-banner {
+  background-image: url("banner.jpg");  /* Adds an image from your folder or a link */
+}</code></pre>
+
+  <!-- 3. Controlling the Background Image -->
+  <p><strong>3. Adjusting the Image:</strong> After adding an image, use these properties to make it fit neatly:</p>
+  <ul>
+    <li><code>background-repeat</code>: Stops the image from tiling or repeating (use <code>no-repeat</code>).</li>
+    <li><code>background-size</code>: Controls the image size. <code>cover</code> stretches it to fill the whole box without distortion.</li>
+    <li><code>background-position</code>: Moves the image to the <code>center</code>, <code>top</code>, or <code>bottom</code>.</li>
+    <li><code>background-attachment</code>: Keeps the image fixed in place while scrolling (<code>fixed</code>) or scrolls with the content (<code>scroll</code>).</li>
+</ul>
+
+  <pre><code>.hero-banner {
+  background-image: url("banner.jpg");  /* Sets the background image */
+  background-repeat: no-repeat;         /* Prevents the image from repeating */
+  background-size: cover;               /* Scales the image to cover the full area */
+  background-position: center;          /* Centers the image inside the box */
+}</code></pre>
+
+  <!-- 4. Linear Gradient -->
+  <p><strong>4. Linear Gradient:</strong> Use <code>linear-gradient()</code> to smoothly blend two or more colors together without using an image file.</p>
+  <pre><code>.gradient-card {
+
+  /* Blends blue into purple from left to right (90deg) */
+
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+}</code></pre>
+
+
+      
+    </main>
+  </body>
+</html>
