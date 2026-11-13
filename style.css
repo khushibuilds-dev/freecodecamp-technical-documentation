@@ -27,7 +27,7 @@ body {
 }
 
 #navbar header {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 900;
   text-align: center;
   padding: 20px 24px;
@@ -43,7 +43,7 @@ body {
   padding: 15px 24px;
   color: #475569;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   border-bottom: 2px solid #e2e8f0; /* Add a bottom border */
   transition: all 0.3s ease;
   margin: 0 10px;
@@ -68,7 +68,7 @@ body {
 }
 
 .main-section header {
-  font-size: 1.8rem;
+  font-size: 1.85rem;
   font-weight: bold;
   margin-bottom: 16px;
   color: #0f1721;
@@ -76,7 +76,7 @@ body {
 }
 
 .main-section p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 16px;
   color: #334155;
   padding: 10px 0;
@@ -90,7 +90,7 @@ body {
   margin-bottom: 12px;
   padding: 10px 0;
   color: #334155;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .main-section .example-box {
@@ -98,7 +98,7 @@ body {
   display: block;
   padding: 10px;
   margin: 12px 0;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   background-color: #f1f5f9;
   border: 1px solid #e2e8f0;
 }
@@ -109,7 +109,7 @@ body {
 }
 
 .main-section h3 {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   margin-bottom: 12px;
   color: #0f1721;
   padding: 10px 0;
@@ -128,7 +128,7 @@ body {
 .position-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   text-align: left;
   background-color: #ffffff;
   min-width: 600px; 
@@ -174,7 +174,7 @@ body {
   padding: 3px 7px;
   border-radius: 4px;
   font-family: monospace;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
 }
 
