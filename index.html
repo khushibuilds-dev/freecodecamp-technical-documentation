@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Documentation Page</title>
+  
     <link rel="stylesheet" href="style.css" />
+
+    
   </head>
   <body>
     <!--Side Bar content-->
@@ -23,11 +26,13 @@
       <a class="nav-link" href="#typography">Typography</a>
       <a class="nav-link" href="#positioning">Positioning</a>
       <a class="nav-link" href="#flexbox">Flexbox</a>
-      <a class="nav-link" href="#css-grid">CSS Grid</a>
+      <a class="nav-link" href="#grid">CSS Grid</a>
       <a class="nav-link" href="#transitions">Transitions</a>
       <a class="nav-link" href="#animations">Animations</a>
       <a class="nav-link" href="#media-queries">Media Queries</a>
       <a class="nav-link" href="#css-variables">CSS Variables</a>
+      <a class="nav-link" href="#CSS_Units">CSS Units</a>
+
     </nav>
 
     <!--Main content-->
@@ -114,21 +119,32 @@
         <ul>
           <li>
             <strong>Element Selector:</strong> Selects all elements of a type.
-            Example: <code>p { color: blue; }</code>
+            <div class="example-box">
+              Example: <code>p { color: blue; }</code>
+            </div>
           </li>
           <li>
             <strong>Class Selector:</strong> Selects elements with a specific
-            class. Example:
-            <code>.highlight { background-color: yellow; }</code>
+            class. 
+            <div class="example-box">
+              Example:
+              <code>.highlight { background-color: yellow; }</code>
+            </div>
           </li>
           <li>
             <strong>ID Selector:</strong> Selects a single element with a
-            specific ID. Example: <code>#header { font-size: 24px; }</code>
+            specific ID.
+            <div class="example-box">
+              Example: <code>#header { font-size: 24px; }</code>
+            </div>
           </li>
           <li>
             <strong>Attribute Selector:</strong> Selects elements based on an
-            attribute value. Example:
-            <code>[type="text"] { border: 1px solid #ccc; }</code>
+            attribute value.
+            <div class="example-box">
+              Example:
+              <code>[type="text"] { border: 1px solid #ccc; }</code>
+            </div>
           </li>
         </ul>
 
@@ -141,81 +157,92 @@
           <li>
             <strong>:hover</strong> - Styles an element when the user moves
             their mouse pointer over it.
-            <br />
-            <strong>Example:</strong>
-            <code>button:hover { background-color: yellow; }</code>
-            <br />
+            <br /><br />
+            <div class="example-box">
+              <strong>Example:</strong>
+              <code>button:hover { background-color: yellow; }</code>
+            <br /><br />
             <em
               >(Explanation: When a user places their mouse cursor over a
               <code>&lt;button&gt;</code>, its background color will immediately
               change to <strong>yellow</strong>.)</em
             >
+            </div>
           </li>
 
           <li>
             <strong>:active</strong> - Styles an element at the exact moment it
             is being clicked.
-            <br />
+            <br /><br />
+            <div class="example-box">
             <strong>Example:</strong>
             <code>button:active { transform: scale(0.95); }</code>
-            <br />
+            <br /><br />
             <em
               >(Explanation: While the user is pressing down the mouse button on
               a <code>&lt;button&gt;</code>, it will slightly shrink to give a
               <strong>real click effect</strong>.)</em
             >
+            </div>
           </li>
 
           <li>
             <strong>:focus</strong> - Styles an input field when the user clicks
             inside it or selects it using the Tab key.
-            <br />
+            <br /><br />
+            <div class="example-box">
             <strong>Example:</strong>
             <code>input:focus { border-color: blue; }</code>
-            <br />
+            <br /><br />
             <em
               >(Explanation: When a user clicks inside an
               <code>&lt;input&gt;</code> box to type, its border will turn
               <strong>blue</strong>.)</em
             >
+            </div>
           </li>
 
           <li>
             <strong>:nth-child(n)</strong> - Selects and styles a specific child
             element based on its position (number) inside a parent.
-            <br />
+            <br /><br />
+            <div class="example-box">
             <strong>Example:</strong>
             <code>li:nth-child(2) { font-weight: bold; }</code>
-            <br />
+            <br /><br />
             <em
               >(Explanation: If you have multiple <code>&lt;li&gt;</code> tags
               inside a <code>&lt;ul&gt;</code>, this CSS will apply
               <strong>only to the 2nd <code>&lt;li&gt;</code> item</strong
               >.)</em
             >
+            </div>
           </li>
 
           <li>
             <strong>:last-child</strong> - Selects and styles only the very last
             child element inside a parent.
-            <br />
+            <br /><br />
+            <div class="example-box">
             <strong>Example:</strong> <code>li:last-child { color: red; }</code>
-            <br />
+            <br /><br />
             <em
               >(Explanation: If you have multiple <code>&lt;li&gt;</code> tags
               inside a <code>&lt;ul&gt;</code>, this CSS will apply
               <strong>only to the very last <code>&lt;li&gt;</code> item</strong
               >.)</em
             >
+            </div>
           </li>
 
           <li>
             <strong>:not(selector)</strong> - Selects and styles every element
             except the ones that match the specified selector.
-            <br />
+            <br /><br />
+            <div class="example-box">
             <strong>Example:</strong>
             <code>li:not(.active) { color: gray; }</code>
-            <br />
+            <br /><br />
             <em
               >(Explanation: If you have multiple <code>&lt;li&gt;</code> tags
               inside a <code>&lt;ul&gt;</code>, this CSS will apply to
@@ -224,15 +251,19 @@
                 <code>class="active"</code></strong
               >.)</em
             >
+
+            </div>
           </li>
 
           <li>
             <strong>:first-of-type</strong> - Selects and styles the very first
             element of a specific tag type inside a parent.
-            <br />
+            <br /><br />
+
+            <div class="example-box">
             <strong>Example:</strong>
             <code>p:first-of-type { color: green; }</code>
-            <br />
+            <br /><br />
             <em
               >(Explanation: If a <code>&lt;div&gt;</code> has an
               <code>&lt;h1&gt;</code> followed by multiple
@@ -240,15 +271,17 @@
               <strong>only to the very first <code>&lt;p&gt;</code> tag</strong
               >, even if it is not the first child overall.)</em
             >
+            </div>
           </li>
 
           <li>
             <strong>:last-of-type</strong> - Selects and styles the very last
             element of a specific tag type inside a parent.
-            <br />
+            <br /><br />
+            <div class="example-box">
             <strong>Example:</strong>
             <code>p:last-of-type { color: purple; }</code>
-            <br />
+            <br /> <br />
             <em
               >(Explanation: If a <code>&lt;div&gt;</code> has multiple
               <code>&lt;p&gt;</code> tags followed by a
@@ -256,15 +289,17 @@
               <strong>only to the very last <code>&lt;p&gt;</code> tag</strong>,
               even if it is not the last child overall.)</em
             >
+            </div>
           </li>
 
           <li>
             <strong>:first-child</strong> - Selects and styles only the very
             first child element inside a parent.
-            <br />
+            <br /><br />
+            <div class="example-box">
             <strong>Example:</strong>
             <code>li:first-child { color: blue; }</code>
-            <br />
+            <br /><br />
             <em
               >(Explanation: If you have multiple <code>&lt;li&gt;</code> tags
               inside a <code>&lt;ul&gt;</code>, this CSS will apply
@@ -272,63 +307,73 @@
                 >only to the very first <code>&lt;li&gt;</code> item</strong
               >.)</em
             >
+
+            </div>
           </li>
 
           <li>
             <strong>::before</strong> - Adds extra content (like text, icons, or
             shapes) right before an element's actual content.
-            <br />
+            <br /><br />
+            <div class="example-box">
             <strong>Example:</strong>
             <code>p::before { content: "Note: "; color: red; }</code>
-            <br />
+            <br /><br />
             <em
               >(Explanation: If you have a <code>&lt;p&gt;</code> tag, this CSS
               will automatically place the red word <strong>"Note: "</strong> in
               front of your paragraph text without changing the HTML.)</em
             >
+            </div>
           </li>
 
           <li>
             <strong>::after</strong> - Adds extra content (like text, icons, or
             shapes) right after an element's actual content.
-            <br />
+            <br /><br />
+            <div class="example-box">
             <strong>Example:</strong>
             <code>p::after { content: " (Read more)"; color: blue; }</code>
-            <br />
+            <br /><br />
             <em
               >(Explanation: If you have a <code>&lt;p&gt;</code> tag, this CSS
               will automatically place the blue text
               <strong>" (Read more)"</strong> at the very end of your paragraph
               without changing the HTML.)</em
             >
+            </div>
           </li>
 
           <li>
             <strong>::first-letter</strong> - Styles only the very first letter
             of a block of text.
-            <br />
+            <br /><br />
+            <div class="example-box">
             <strong>Example:</strong>
             <code>p::first-letter { font-size: 32px; color: red; }</code>
-            <br />
+            <br /><br />
             <em
               >(Explanation: In any <code>&lt;p&gt;</code> paragraph, only the
               <strong>very first alphabet</strong> will become large and red,
               just like in a newspaper or storybook.)</em
             >
+            </div>
           </li>
 
           <li>
             <strong>::placeholder</strong> - Styles the hint text inside an
             input field before the user types anything.
-            <br />
+            <br /><br />
+            <div class="example-box">
             <strong>Example:</strong>
             <code>input::placeholder { color: gray; font-style: italic; }</code>
-            <br />
+            <br /><br />
             <em
               >(Explanation: The temporary hint text inside an
               <code>&lt;input&gt;</code> box (like "Enter your name") will
               appear in <strong>gray and italic</strong>.)</em
             >
+            </div>
           </li>
         </ul>
       </section>
@@ -344,24 +389,32 @@
 
         <h3>Text Color</h3>
         <p>Use the <code>color</code> property to change text color.</p>
-        <pre><code>p { color: blue; }</code></pre>
-<h3>Background Color</h3>
-  <p>CSS background properties let you add solid colors, images, or smooth color gradients behind any HTML element.</p>
+        <div class="example-box">
+          <strong>Example:</strong>
+          <code>p { color: blue; }</code>
+        </div>
+        <h3>Background Color</h3>
+         <p>CSS background properties let you add solid colors, images, or smooth color gradients behind any HTML element.</p>
 
-  <!-- 1. Background Color -->
-  <p><strong>1. Background Color:</strong> Use <code>background-color</code> to fill an element with a solid color. You can use color names, HEX codes, or RGB values.</p>
-  <pre><code>.box {
-  background-color: #1e293b;  /* Sets a dark blue-grey background color */
-}</code></pre>
+       <!-- 1. Background Color -->
+             <p><strong>1. Background Color:</strong> Use <code>background-color</code> to fill an element with a solid color. You can use color names, HEX codes, or RGB values.</p>
+  
+              <div class="example-box">
+            <pre><code>.box {
+                      background-color: #1e293b;  /* Sets a dark blue-grey background color */
+                 }</code></pre>
+               </div>
 
   <!-- 2. Background Image -->
-  <p><strong>2. Background Image:</strong> Use <code>background-image</code> with <code>url()</code> to place a picture behind an element.</p>
-  <pre><code>.hero-banner {
-  background-image: url("banner.jpg");  /* Adds an image from your folder or a link */
-}</code></pre>
+              <p><strong>2. Background Image:</strong> Use <code>background-image</code> with <code>url()</code> to place a picture behind an element.</p>
+                <div class="example-box">
+                <pre><code>.hero-banner {
+              background-image: url("banner.jpg");  /* Adds an image from your folder or a link */
+            }</code></pre>
+               </div>
 
-  <!-- 3. Controlling the Background Image -->
-  <p><strong>3. Adjusting the Image:</strong> After adding an image, use these properties to make it fit neatly:</p>
+          <!-- 3. Controlling the Background Image -->
+            <p><strong>3. Adjusting the Image:</strong> After adding an image, use these properties to make it fit neatly:</p>
   <ul>
     <li><code>background-repeat</code>: Stops the image from tiling or repeating (use <code>no-repeat</code>).</li>
     <li><code>background-size</code>: Controls the image size. <code>cover</code> stretches it to fill the whole box without distortion.</li>
@@ -369,24 +422,965 @@
     <li><code>background-attachment</code>: Keeps the image fixed in place while scrolling (<code>fixed</code>) or scrolls with the content (<code>scroll</code>).</li>
 </ul>
 
-  <pre><code>.hero-banner {
+  <div class="example-box">
+    <pre><code>.hero-banner {
   background-image: url("banner.jpg");  /* Sets the background image */
   background-repeat: no-repeat;         /* Prevents the image from repeating */
   background-size: cover;               /* Scales the image to cover the full area */
   background-position: center;          /* Centers the image inside the box */
 }</code></pre>
+  </div>
 
   <!-- 4. Linear Gradient -->
   <p><strong>4. Linear Gradient:</strong> Use <code>linear-gradient()</code> to smoothly blend two or more colors together without using an image file.</p>
-  <pre><code>.gradient-card {
+  <div class="example-box">
+    <pre><code>.gradient-card {
 
   /* Blends blue into purple from left to right (90deg) */
 
   background: linear-gradient(90deg, #3b82f6, #8b5cf6);
 }</code></pre>
+  </div>
+ 
+     </section>
 
 
+     <section id="the-box-model" class="main-section">
+        <header>
+          The Box Model
+        </header>
+        <p>
+          Every HTML element is a rectangular box. The CSS box model describes
+          how the size of that box is calculated, including its content, padding,
+          border, and margin.
+        </p>
+
+        <h3>Box Model Components</h3>
+        <ul>
+          <li>
+            <strong>Content:</strong> The actual text, image, or other media
+            inside the box.
+          </li>
+          <li>
+            <strong>Padding:</strong> The space between the content and the
+            border. It creates breathing room inside the box.
+          </li>
+          <li>
+            <strong>Border:</strong> A line that wraps around the padding and
+            content. You can style it with width, color, and type (solid,
+            dashed, etc.).
+          </li>
+          <li>
+            <strong>Margin:</strong> The space outside the border that separates
+            this box from other elements.
+          </li>
+        </ul>
+
+        <h3>Example</h3>
+        <div class="example-box">
+          <pre><code>.box {
+            width: 200px;             /* Width of the content area */
+            padding: 20px;            /* Space inside the box */
+            border: 5px solid black;  /* Border around the box */
+            margin: 10px;             /* Space outside the box */
+
+          
+          }
+
+          </code></pre>
+
+          <em>Note: The total width of the box will be the sum of its width, padding, and border.</em>
+
+          <br /><br />
+          <strong>
+            (Total Width = Content Width + Padding + Border)</strong>  
+
+            <br /><br />
+          200px + 20px + 20px + 5px + 5
+                      <em>Margin is not included in the box's width calculation.</em>
+        </div>
+
+     </section>
       
+<section class="main-section" id="typography">
+  <header>Typography</header>
+  
+  <p>
+    Typography in CSS refers to the art and technique of styling text on a webpage. 
+    It includes choosing the right font, setting text sizes, adjusting spacing, 
+    and controlling text alignment.
+  </p>
+  <p>
+    Good typography makes your website easy to read, creates a visual hierarchy, 
+    and improves the overall user experience across different screen sizes.
+  </p>
+
+  <h3>Common Typography Properties</h3>
+  <ul>
+    <li>
+      <strong>font-family:</strong> Specifies the typeface (font style) for text. You should always provide fallback fonts in case the first font fails to load.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">font-family: 'Segoe UI', Arial, sans-serif;</code>
+        <p class="explanation">
+          <em>(Note: Always end with a generic family name like <code>sans-serif</code> or <code>serif</code>.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>font-size:</strong> Sets the size of the text. You can use fixed units like <code>px</code> or responsive units like <code>rem</code> and <code>em</code>.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">font-size: 16px;</code>
+        <p class="explanation">
+          <em>(Note: <code>1rem</code> is usually equal to <code>16px</code> in most modern browsers.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>font-weight:</strong> Controls how thick or thin the characters in text should be displayed.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">font-weight: bold;</code>
+        <p class="explanation">
+          <em>(Common values: <code>normal</code> (400), <code>bold</code> (700), or numbers from <code>100</code> to <code>900</code>.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>line-height:</strong> Adjusts the vertical space between lines of text to improve readability.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">line-height: 1.5;</code>
+        <p class="explanation">
+          <em>(Note: Using a unitless number like <code>1.5</code> is recommended because it scales automatically with the font size.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>letter-spacing:</strong> Increases or decreases the horizontal space between individual characters.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">letter-spacing: 2px;</code>
+        <p class="explanation">
+          <em>(Tip: Slightly positive spacing works great for uppercase headings.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>text-decoration:</strong> Adds or removes decorative lines on text, such as underlines, overlines, or strikethroughs.
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">text-decoration: none;</code>
+        <code class="main-code">text-decoration: underline;</code>
+        <code class="main-code">text-decoration: overline;</code>
+        <code class="main-code">text-decoration: line-through;</code>
+        <p class="explanation">
+          <em>(Note: Setting it to <code>none</code> is most commonly used to remove default underlines from <code>&lt;a&gt;</code> links.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>text-align:</strong> Controls the horizontal alignment of text inside its container.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">text-align: center;</code>
+        <p class="explanation">
+          <em>(Common values: <code>left</code>, <code>right</code>, <code>center</code>, and <code>justify</code>.)</em>
+        </p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="main-section" id="positioning">
+  <header>CSS Positioning</header>
+  
+  <p>
+    The <code>position</code> property in CSS controls how an element is placed on a webpage 
+    and how it interacts with the normal document flow (the default layout order of HTML elements).
+  </p>
+  <p>
+    Depending on the position value you choose, an element either keeps its original space reserved 
+    on the page or gets completely removed from the flow, allowing other elements below it to move up 
+    and fill the empty gap.
+  </p>
+
+  <h3>Position Values and Document Flow</h3>
+  <ul>
+    <li>
+      <strong>position: static;</strong> This is the default value for all HTML elements. Elements follow the normal document flow from top to bottom.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">div { position: static; }</code>
+        <p class="explanation">
+          <em>(Behavior: The element stays in its natural spot, and properties like <code>top</code>, <code>bottom</code>, <code>left</code>, or <code>right</code> have no effect.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>position: relative;</strong> Moves the element relative to its own original starting position without removing it from the document flow.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">.box { position: relative; top: 20px; left: 30px; }</code>
+        <p class="explanation">
+          <em>(Space Behavior: When the element moves, <strong>its original space stays reserved (empty)</strong>. Elements below it do NOT move up to fill the gap, so the moved element may overlap neighboring content.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>position: absolute;</strong> Completely removes the element from the normal document flow and positions it relative to its nearest positioned ancestor (an ancestor with <code>relative</code>, <code>absolute</code>, <code>fixed</code>, or <code>sticky</code>).
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">.badge { position: absolute; top: 10px; right: 10px; }</code>
+        <p class="explanation">
+          <em>(Space Behavior: Because it is lifted out of the normal flow, <strong>no empty space is left behind</strong>. All elements below it immediately shift up to take its original place.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>position: fixed;</strong> Removes the element from the normal document flow and locks it relative to the browser window (viewport). It stays in the exact same spot even when the user scrolls.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">#navbar { position: fixed; top: 0; left: 0; width: 100%; }</code>
+        <p class="explanation">
+          <em>(Space Behavior: Just like <code>absolute</code>, <strong>it leaves zero empty space behind</strong> in the layout. Content below it moves up to the top, which is why you often need to add <code>margin-top</code> or <code>padding-top</code> to the main body so content doesn't hide underneath a fixed navbar.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>position: sticky;</strong> Acts like <code>relative</code> at first, and switches to <code>fixed</code> once the user scrolls past a specified threshold (like <code>top: 0</code>).
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">.sticky-header { position: sticky; top: 0; }</code>
+        <p class="explanation">
+          <em>(Space Behavior: <strong>Its original space always remains preserved</strong> in the document flow, so elements below it never jump up unexpectedly when it sticks.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>z-index:</strong> Controls the vertical stacking order (front-to-back) when positioned elements overlap each other.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">.popup { position: absolute; z-index: 10; }</code>
+        <p class="explanation">
+          <em>(Note: An element with a higher <code>z-index</code> sits on top of elements with a lower number. It only works on elements that have a position other than <code>static</code>.)</em>
+        </p>
+      </div>
+    </li>
+  </ul>
+<div class="table-container">
+  <h3>Quick Summary: Position Comparison</h3>
+<table class="position-table">
+  <thead>
+    <tr>
+      <th>Position Value</th>
+      <th>Stays in Document Flow?</th>
+      <th>Original Space Reserved?</th>
+      <th>Elements Below Shift Up?</th>
+      <th>Positioned Relative To</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>static</code></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>Normal page flow</td>
+    </tr>
+    <tr>
+      <td><code>relative</code></td>
+      <td>Yes</td>
+      <td><strong>Yes</strong> (Empty gap remains)</td>
+      <td><strong>No</strong></td>
+      <td>Its own original spot</td>
+    </tr>
+    <tr>
+      <td><code>absolute</code></td>
+      <td>No</td>
+      <td><strong>No</strong> (Removed from flow)</td>
+      <td><strong>Yes</strong> (Moves up immediately)</td>
+      <td>Nearest positioned ancestor</td>
+    </tr>
+    <tr>
+      <td><code>fixed</code></td>
+      <td>No</td>
+      <td><strong>No</strong> (Removed from flow)</td>
+      <td><strong>Yes</strong> (Moves up immediately)</td>
+      <td>Browser window (viewport)</td>
+    </tr>
+    <tr>
+      <td><code>sticky</code></td>
+      <td>Yes</td>
+      <td><strong>Yes</strong> (Space stays intact)</td>
+      <td><strong>No</strong></td>
+      <td>Scroll container &amp; viewport</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</section>
+
+     <section class="main-section" id="flexbox">
+  <header>CSS Flexbox</header>
+  
+  <p>
+    CSS Flexbox (Flexible Box Layout) is a layout system used to arrange, align, and distribute space among items inside a container.
+  </p>
+  <p>
+    To activate Flexbox, you add <code>display: flex;</code> to a parent container, which immediately places all its direct child elements side-by-side in a flexible row.
+  </p>
+
+  <h3>Common Flexbox Properties</h3>
+  <ul>
+    <li>
+      <strong>flex-direction:</strong> Defines the direction in which items are placed inside the container. By default, it is set to <code>row</code> (horizontal, left to right), so you do not need to write anything if you want a normal row.
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">flex-direction: row;</code>
+        <code class="main-code">flex-direction: column;</code>
+        <p class="explanation">
+          <em>(Note: <code>row</code> places items horizontally from left to right, while <code>column</code> stacks items vertically from top to bottom. You can also use <code>row-reverse</code> and <code>column-reverse</code>.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>justify-content:</strong> Aligns flex items along the <strong>main axis</strong>. When direction is <code>row</code>, it moves items horizontally (left to right); when direction is <code>column</code>, it moves items vertically (top to bottom).
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">justify-content: center;</code>
+        <code class="main-code">justify-content: space-between;</code>
+        <code class="main-code">justify-content: space-around;</code>
+        <code class="main-code">justify-content: flex-end;</code>
+        <p class="explanation">
+          <em>(Note: Other values include <code>flex-start</code> and <code>space-evenly</code>. If direction is <code>column</code>, the parent needs a <code>height</code> to move items vertically.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>align-items:</strong> Aligns flex items along the <strong>cross axis</strong> (the opposite direction of <code>justify-content</code>). When direction is <code>row</code>, it moves items up and down, so the parent container must have a defined <code>height</code>.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">.container { display: flex; height: 200px; justify-content: center; align-items: center; }</code>
+        <p class="explanation">
+          <em>(Important: Without <code>justify-content: center</code>, items stay on the left side when centered vertically. Also, if <code>flex-direction</code> is <code>column</code>, <code>align-items</code> moves items left and right instead of up and down. Common values are <code>center</code>, <code>flex-start</code>, <code>flex-end</code>, and <code>stretch</code>.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>flex-wrap:</strong> Controls whether flex items stay squeezed onto one single line or wrap onto the next line when there is not enough space.
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">flex-wrap: nowrap;</code>
+        <code class="main-code">flex-wrap: wrap;</code>
+        <p class="explanation">
+          <em>(Note: <code>nowrap</code> is the default, which forces all items to shrink and stay on one line. Using <code>wrap</code> pushes extra items onto the next line automatically.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>flex-flow:</strong> A shorthand property that lets you write both <code>flex-direction</code> and <code>flex-wrap</code> together in one line.
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">flex-flow: row wrap;</code>
+        <code class="main-code">flex-flow: column nowrap;</code>
+        <p class="explanation">
+          <em>(Syntax: <code>flex-flow: [flex-direction] [flex-wrap];</code>)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>gap:</strong> Adds clean, equal space between flex items without needing extra margins on each box.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">gap: 15px;</code>
+        <p class="explanation">
+          <em>(Tip: You can also use <code>row-gap</code> and <code>column-gap</code> separately.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>align-content:</strong> Aligns multiple wrapped lines of items when there is extra vertical space in the container.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">align-content: space-between;</code>
+        <p class="explanation">
+          <em>(Note: This property only works when <code>flex-wrap: wrap;</code> is active and there are two or more rows of items.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>flex (Child Item Property):</strong> Applied directly to a child item (not the parent) to control how much it can grow or shrink to fill extra space.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">.box-1 { flex: 1; }</code>
+        <p class="explanation">
+          <em>(Note: <code>flex: 1</code> is shorthand for <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code>, allowing items to expand equally.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>order (Child Item Property):</strong> Changes the visual order of individual flex items without changing the HTML code.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">.first-box { order: 2; }</code>
+        <p class="explanation">
+          <em>(Note: Default order for all items is <code>0</code>. Lower numbers appear first, and higher numbers appear later.)</em>
+        </p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="main-section" id="grid">
+  <header>CSS Grid</header>
+  
+  <p>
+    CSS Grid Layout is a two-dimensional layout system that lets you arrange items into both <strong>rows and columns</strong> at the same time. While Flexbox works best in one direction at a time, Grid is ideal for building complete webpage layouts (like header, sidebar, main content, and footer).
+  </p>
+  <p>
+    To start using Grid, you apply <code>display: grid;</code> to a parent container, which turns all its direct children into grid items.
+  </p>
+
+  <h3>Common CSS Grid Properties</h3>
+  <ul>
+    <li>
+      <strong>display: grid;</strong> Activates the Grid layout on a parent container so you can create rows and columns inside it.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">.container { display: grid; }</code>
+        <p class="explanation">
+          <em>(Note: By itself, <code>display: grid;</code> keeps items stacked in a single column until you define column sizes.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>grid-template-columns:</strong> Defines the number of columns and the width of each column in your grid layout.
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">grid-template-columns: 1fr 1fr 1fr;</code>
+        <code class="main-code">grid-template-columns: 250px 1fr;</code>
+        <code class="main-code">grid-template-columns: repeat(3, 1fr);</code>
+        <p class="explanation">
+          <em>(Note: The <code>fr</code> unit stands for "fraction" of the available space. In <code>1fr 1fr 1fr</code>, the page is divided into 3 equal parts. In <code>250px 1fr</code>, the sidebar gets <code>250px</code> and the main content automatically takes up the rest of the screen. You can also use <code>repeat(3, 1fr)</code> as a shortcut for three equal columns.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>grid-template-rows:</strong> Defines the height of each horizontal row in your grid.
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">grid-template-rows: 80px 1fr 60px;</code>
+        <code class="main-code">grid-auto-rows: minmax(150px, auto);</code>
+        <p class="explanation">
+          <em>(Note: In <code>80px 1fr 60px</code>, the header gets <code>80px</code>, footer gets <code>60px</code>, and the middle content takes the remaining height. Use <code>grid-auto-rows</code> to automatically set height for extra rows.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>grid-template-areas:</strong> Lets you design an entire webpage layout visually using custom names for each section (like header, sidebar, main, and footer).
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">.page { display: grid; grid-template-areas: "header header" "sidebar main" "footer footer"; }</code>
+        <code class="main-code">.header { grid-area: header; }</code>
+        <p class="explanation">
+          <em>(Note: Each string inside quotes represents one row. Repeating a name like <code>"header header"</code> makes that section stretch across two columns.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>gap:</strong> Sets clean spacing between grid rows and columns without adding outer margins or causing horizontal scrollbars.
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">gap: 20px;</code>
+        <code class="main-code">gap: 15px 30px;</code>
+        <p class="explanation">
+          <em>(Note: One value sets equal spacing for both rows and columns. Two values set <code>row-gap</code> first and <code>column-gap</code> second.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>grid-column &amp; grid-row:</strong> Applied to child grid items to make a single box stretch (span) across multiple columns or rows.
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">.banner { grid-column: 1 / -1; }</code>
+        <code class="main-code">.featured-card { grid-column: span 2; grid-row: span 2; }</code>
+        <p class="explanation">
+          <em>(Note: Using <code>1 / -1</code> stretches an item across the full width of the page from the first line to the very last line, while <code>span 2</code> makes it take up 2 columns or rows.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>place-items:</strong> A shorthand property that aligns content both vertically and horizontally inside every grid cell at once.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">.container { display: grid; place-items: center; }</code>
+        <p class="explanation">
+          <em>(Note: It combines <code>align-items</code> and <code>justify-items</code>, making it the fastest way in CSS to dead-center any element.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>Responsive Grid (auto-fit &amp; minmax):</strong> Automatically adjusts the number of columns based on screen size without needing media queries.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));</code>
+        <p class="explanation">
+          <em>(Note: Each card stays at least <code>250px</code> wide and automatically wraps onto a new row on smaller mobile screens.)</em>
+        </p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+
+<section class="main-section" id="transitions">
+  <header>CSS Transitions</header>
+  
+  <p>
+    CSS Transitions allow you to change property values smoothly over a given duration instead of having them happen instantly. They are most commonly used with hover effects (like changing a button's background color or size when a user moves their mouse over it).
+  </p>
+  <p>
+    To create a transition effect, you must specify at least two things: the CSS property you want to animate and the duration of the effect.
+  </p>
+
+  <h3>Common CSS Transition Properties</h3>
+  <ul>
+    <li>
+      <strong>transition-property:</strong> Specifies the exact CSS property (or properties) you want to animate when a change occurs.
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">transition-property: background-color;</code>
+        <code class="main-code">transition-property: all;</code>
+        <p class="explanation">
+          <em>(Note: Using <code>all</code> animates every property that changes on hover, though naming specific properties like <code>transform</code> or <code>opacity</code> gives better performance.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>transition-duration:</strong> Defines how long the transition animation takes to complete. It is written in seconds (<code>s</code>) or milliseconds (<code>ms</code>).
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">transition-duration: 0.3s;</code>
+        <code class="main-code">transition-duration: 500ms;</code>
+        <p class="explanation">
+          <em>(Note: If you do not set a duration, the default value is <code>0s</code>, which means no smooth transition will happen. For buttons and links, <code>0.2s</code> to <code>0.4s</code> feels the most natural.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>transition-timing-function:</strong> Controls the speed curve of the transition, deciding whether it starts slow, moves at a constant speed, or slows down at the end.
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">transition-timing-function: ease;</code>
+        <code class="main-code">transition-timing-function: linear;</code>
+        <code class="main-code">transition-timing-function: ease-in-out;</code>
+        <p class="explanation">
+          <em>(Note: <code>ease</code> is the default (starts slow, speeds up, then ends slow). <code>linear</code> keeps the exact same speed from start to finish, while <code>ease-in-out</code> gives a smooth slow start and slow end.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>transition-delay:</strong> Sets a waiting time before the transition effect actually begins after the user triggers it (such as hovering).
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">transition-delay: 0.5s;</code>
+        <p class="explanation">
+          <em>(Note: Useful when you want multiple elements to animate one after another in a sequence rather than all at the exact same moment.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>transition (Shorthand Property):</strong> Lets you write all four transition properties together in a single, clean line of CSS.
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <br>
+        <code class="main-code">.btn { transition: background-color 0.3s ease 0s; }</code>
+        <br>
+        <code class="main-code">.btn:hover { background-color: #0b5394; }</code>
+        <br>
+        <p class="explanation">
+          <em>(Note: Always put the <code>transition</code> property on the normal base element (like <code>.btn</code>) and NOT inside <code>:hover</code>. Putting it on the base element ensures the animation plays smoothly both when the mouse enters and when it leaves.)</em>
+        </p>
+      </div>
+    </li>
+  </ul>
+
+      <li>
+      <strong>transition (Shorthand Property):</strong> Lets you write all four transition properties together in a single line instead of writing them separately.
+      <div class="example-box">
+        <strong>Syntax &amp; Examples:</strong>
+        <code class="main-code">/* Syntax: transition: property duration timing-function delay; */</code>
+        <code class="main-code">.btn { transition: background-color 0.3s ease 0s; }</code>
+        <code class="main-code">.btn { transition: all 0.3s ease-in-out; }</code>
+        <code class="main-code">.card { transition: transform 0.3s ease, box-shadow 0.4s linear; }</code>
+        <p class="explanation">
+          <em>(Note: Only <code>property</code> and <code>duration</code> are required—if you skip <code>timing-function</code> and <code>delay</code>, CSS uses default values automatically. You can also animate multiple properties at once by separating them with a comma. Always place <code>transition</code> on the base element, not on <code>:hover</code>, so it animates smoothly both in and out.)</em>
+        </p>
+      </div>
+    </li>
+
+</section>
+
+<section class="main-section" id="animations">
+  <header>CSS Animations</header>
+  
+  <p>
+    CSS Animations allow you to animate elements smoothly from one style to another without needing JavaScript. Unlike transitions (which require a trigger like <code>:hover</code>), animations can start automatically as soon as the page loads and can loop forever.
+  </p>
+  <p>
+    To create a CSS animation, you need two parts: a <code>@keyframes</code> rule (which defines the steps of the animation) and animation properties applied to the HTML element.
+  </p>
+
+  <h3>Common CSS Animation Properties &amp; Concepts</h3>
+  <ul>
+    <li>
+      <strong>@keyframes Rule (Defining Steps):</strong> Controls what happens at different stages of the animation using <code>from</code> / <code>to</code> or percentage steps (<code>0%</code>, <code>50%</code>, <code>100%</code>).
+      <div class="example-box">
+        <strong>Example (Fade &amp; Slide In):</strong>
+        <code class="main-code">@keyframes slideIn { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }</code>
+        <p class="explanation">
+          <em>(Note: <code>0%</code> is the starting style and <code>100%</code> is the ending style. You can add middle steps like <code>50%</code> to change direction, color, or size halfway through.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>animation-name &amp; animation-duration:</strong> Connects the <code>@keyframes</code> rule to your element and sets how long one full cycle of the animation takes.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">.box { animation-name: slideIn; animation-duration: 1.5s; }</code>
+        <p class="explanation">
+          <em>(Note: Without <code>animation-duration</code>, the default is <code>0s</code> and the animation will not play at all.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>animation-iteration-count:</strong> Sets how many times the animation should repeat. You can give a specific number or use <code>infinite</code> to make it run forever.
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">animation-iteration-count: 3;</code>
+        <code class="main-code">animation-iteration-count: infinite;</code>
+        <p class="explanation">
+          <em>(Note: Use <code>infinite</code> for loading spinners, pulsing buttons, and floating icons.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>animation-direction &amp; animation-fill-mode:</strong> Controls whether the animation plays forward, backward, or alternates back-and-forth, and whether it keeps its final style after finishing.
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">animation-direction: alternate;</code>
+        <code class="main-code">animation-fill-mode: forwards;</code>
+        <p class="explanation">
+          <em>(Note: <code>alternate</code> makes an element bounce smoothly back and forth (0% to 100%, then 100% back to 0%). <code>forwards</code> stops the element from snapping back to its original position after the animation ends.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>animation (Shorthand Property):</strong> Combines all animation settings into a single, clean line of CSS.
+      <div class="example-box">
+        <strong>Syntax &amp; Example:</strong>
+        <code class="main-code">/* Syntax: animation: name duration timing-function delay iteration-count direction fill-mode; */</code>
+        <code class="main-code">.hero-text { animation: slideIn 1s ease-out 0.2s 1 normal forwards; }</code>
+        <p class="explanation">
+          <em>(Note: You only need <code>name</code> and <code>duration</code> at minimum; any skipped values automatically use their defaults.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>Creating Specific Animations (Circle Spinner, Bounce &amp; Pulse):</strong> By combining <code>@keyframes</code> with <code>transform</code> and <code>border-radius</code>, you can build popular UI effects.
+      <div class="example-box">
+        <strong>1. Circle Loading Spinner (360° Rotation):</strong>
+        <code class="main-code">.spinner { width: 50px; height: 50px; border: 5px solid #ddd; border-top-color: #0b5394; border-radius: 50%; animation: spin 1s linear infinite; }</code>
+        <code class="main-code">@keyframes spin { 100% { transform: rotate(360deg); } }</code>
+        <p class="explanation">
+          <em>(How Circle Spinner Works: Giving equal <code>width</code> and <code>height</code> with <code>border-radius: 50%</code> creates a circle. Coloring only <code>border-top-color</code> and rotating <code>360deg</code> with <code>linear infinite</code> makes a smooth loading wheel.)</em>
+        </p>
+      </div>
+
+      <div class="example-box">
+        <strong>2. Bouncing Ball / Icon (Up &amp; Down):</strong>
+        <code class="main-code">.ball { width: 40px; height: 40px; border-radius: 50%; animation: bounce 0.6s ease-in-out infinite alternate; }</code>
+        <code class="main-code">@keyframes bounce { 0% { transform: translateY(0); } 100% { transform: translateY(-25px); } }</code>
+        <p class="explanation">
+          <em>(How Bounce Works: Moving the circle up with <code>translateY(-25px)</code> and using <code>infinite alternate</code> makes it jump up and fall down smoothly forever.)</em>
+        </p>
+      </div>
+
+      <div class="example-box">
+        <strong>3. Pulse / Heartbeat Effect (Zoom In &amp; Out):</strong>
+        <code class="main-code">.pulse-btn { animation: pulse 1.2s ease-in-out infinite alternate; }</code>
+        <code class="main-code">@keyframes pulse { 0% { transform: scale(1); } 100% { transform: scale(1.15); } }</code>
+        <p class="explanation">
+          <em>(How Pulse Works: <code>scale(1.15)</code> grows the element by 15% and shrinks it back to normal size, great for notification badges or call-to-action buttons.)</em>
+        </p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="main-section" id="media-queries">
+  <header>Media Queries</header>
+  
+  <p>
+    CSS Media Queries are used to make websites <strong>responsive</strong>, meaning the layout automatically adjusts to look clean and readable on all screen sizes—from small mobile phones to tablets and wide laptop screens.
+  </p>
+  <p>
+    Using the <code>@media</code> rule, you can apply specific CSS styles only when the browser screen matches certain conditions like width, height, or device orientation.
+  </p>
+
+  <h3>Media Query Concepts &amp; Breakpoints</h3>
+  <ul>
+    <li>
+      <strong>@media Rule (Basic Syntax):</strong> Wraps your responsive CSS rules inside curly braces so they only activate when a screen size condition is true.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">@media (max-width: 768px) { body { font-size: 14px; } }</code>
+        <p class="explanation">
+          <em>(Note: Remember to always include <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</code> inside your HTML <code>&lt;head&gt;</code> tag, otherwise mobile browsers will zoom out and ignore media queries.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>max-width (Desktop-First Approach):</strong> Applies styles when the screen width is <strong>equal to or smaller than</strong> the given value. It acts as an upper limit ("up to this size").
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">@media (max-width: 600px) { .container { flex-direction: column; } }</code>
+        <p class="explanation">
+          <em>(How <code>max-width</code> Works: Any screen from <code>0px</code> up to <code>600px</code> (mobile phones) will stack items in a column. Once the screen becomes wider than <code>600px</code>, this rule turns off automatically.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>min-width (Mobile-First Approach):</strong> Applies styles when the screen width is <strong>equal to or larger than</strong> the given value. It acts as a starting limit ("from this size and above").
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">@media (min-width: 769px) { .grid { grid-template-columns: repeat(3, 1fr); } }</code>
+        <p class="explanation">
+          <em>(How <code>min-width</code> Works: This rule stays off on small mobile screens and activates only when the screen reaches <code>769px</code> or wider (tablets and laptops).)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>Combining min-width &amp; max-width (Target Specific Devices):</strong> You can use the <code>and</code> keyword to target an exact range of screen sizes, such as tablets only.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">@media (min-width: 601px) and (max-width: 1024px) { .cards { grid-template-columns: repeat(2, 1fr); } }</code>
+        <p class="explanation">
+          <em>(Note: This rule applies strictly between <code>601px</code> and <code>1024px</code>, leaving phones below 601px and large laptops above 1024px unaffected.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>Standard Screen Sizes (Mobile, Tablet &amp; Laptop Views):</strong> Developers use common screen width breakpoints to design layouts for different devices.
+      <div class="example-box">
+        <strong>Common Device Breakpoints:</strong>
+        <code class="main-code">/* Mobile Phones: 320px to 600px */</code>
+        <code class="main-code">/* Tablets (iPad): 601px to 1024px */</code>
+        <code class="main-code">/* Laptops &amp; Desktops: 1025px and above */</code>
+        <p class="explanation">
+          <em>(How Views Change: On <strong>Mobile View</strong>, sidebars move to the top, multi-column grids become 1 single column, and font sizes get slightly smaller. On <strong>Laptop View</strong>, sidebars stay fixed on the left and content spreads across 2 to 4 columns.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>Responsive Navbar Example (freeCodeCamp Project Layout):</strong> Moves a fixed left sidebar to the top of the screen on mobile devices so the content has enough room to read.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">@media (max-width: 768px) { #navbar { position: relative; width: 100%; height: auto; } #main-doc { margin-left: 0; } }</code>
+        <p class="explanation">
+          <em>(Note: Always write your <code>@media</code> queries at the <strong>very bottom</strong> of your CSS file so they properly override your main desktop styles.)</em>
+        </p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="main-section" id="css-variables">
+  <header>CSS Variables</header>
+  
+  <p>
+    CSS Variables (officially called <strong>Custom Properties</strong>) allow you to store reusable values—such as colors, font sizes, or spacing—in one place and reuse them throughout your entire stylesheet.
+  </p>
+  <p>
+    Using variables makes your CSS code much easier to maintain. If you ever want to change your website's main theme color, you only need to update the variable value once instead of editing hundreds of lines of code.
+  </p>
+
+  <h3>CSS Variable Rules &amp; Concepts</h3>
+  <ul>
+    <li>
+      <strong>:root Selector (Global Variables):</strong> Declares variables at the highest level of the webpage (the <code>&lt;html&gt;</code> element) so they can be accessed and used anywhere in your CSS file.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">:root { --primary-color: #0b5394; --bg-color: #ffffff; --main-padding: 16px; }</code>
+        <p class="explanation">
+          <em>(Note: Every CSS variable name must start with two dashes (<code>--</code>), and variable names are case-sensitive, meaning <code>--main-color</code> and <code>--Main-Color</code> are treated as two different variables.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>var() Function (Using Variables):</strong> Inserts the stored value of a custom property into any normal CSS rule.
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">body { background-color: var(--bg-color); }</code>
+        <code class="main-code">h1 { color: var(--primary-color); padding: var(--main-padding); }</code>
+        <p class="explanation">
+          <em>(Note: You can use <code>var()</code> for colors, pixel sizes, fonts, shadows, or any valid CSS value.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>Fallback Values (Backup Value):</strong> Lets you provide a second backup value inside <code>var()</code> in case the main variable is not defined or has a typo.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">button { background-color: var(--btn-color, #007bff); }</code>
+        <p class="explanation">
+          <em>(How it works: If <code>--btn-color</code> exists, the browser uses it. If <code>--btn-color</code> is missing, the browser safely falls back to <code>#007bff</code> instead of breaking the design.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>Local Variables (Scoped to One Element):</strong> Variables declared inside a specific class or element (instead of <code>:root</code>) only work inside that element and its children.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">.alert-box { --box-color: #d9534f; border: 2px solid var(--box-color); color: var(--box-color); }</code>
+        <p class="explanation">
+          <em>(Note: Trying to use <code>var(--box-color)</code> outside of <code>.alert-box</code> will not work because it is a local variable.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>Easy Dark Mode / Theme Switching:</strong> Because CSS variables update live in the browser, you can switch an entire website from Light Theme to Dark Theme just by redefining the variables inside a dark class.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">:root { --bg: #ffffff; --text: #222222; }</code>
+        <code class="main-code">body.dark-theme { --bg: #121212; --text: #f5f5f5; }</code>
+        <code class="main-code">body { background-color: var(--bg); color: var(--text); }</code>
+        <p class="explanation">
+          <em>(Note: Whenever the <code>dark-theme</code> class is added to <code>&lt;body&gt;</code>, every element using <code>var(--bg)</code> and <code>var(--text)</code> automatically switches colors at once.)</em>
+        </p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="main-section" id="CSS_Units">
+  <header>CSS Units</header>
+  
+  <p>
+    CSS Units are used to define sizes for properties like <code>width</code>, <code>height</code>, <code>font-size</code>, <code>padding</code>, and <code>margin</code>. They are divided into two main categories: <strong>Absolute Units</strong> (fixed sizes) and <strong>Relative Units</strong> (flexible sizes that adapt to screen or font changes).
+  </p>
+  <p>
+    Choosing the right CSS unit is very important for building responsive websites that look great on both small mobile screens and large desktop monitors.
+  </p>
+
+  <h3>Common CSS Units</h3>
+  <ul>
+    <li>
+      <strong>px (Pixels — Absolute Unit):</strong> A fixed size unit that stays the exact same regardless of screen size or parent container width.
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">border: 2px solid #0b5394;</code>
+        <code class="main-code">border-radius: 8px;</code>
+        <p class="explanation">
+          <em>(Note: Because <code>px</code> is fixed, it does not scale automatically on different screens. It is best used for small details like borders, shadows, and rounded corners, rather than large page widths.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>% (Percentage — Relative to Parent):</strong> Sets a size relative to the size of the element's <strong>parent container</strong>.
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">.child-box { width: 50%; }</code>
+        <p class="explanation">
+          <em>(How it works: If the parent container is <code>800px</code> wide, <code>50%</code> makes the child box <code>400px</code> wide. If the parent shrinks on mobile, the child shrinks automatically too.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>rem (Root EM — Relative to Root HTML Font Size):</strong> Scales relative to the font size of the root <code>&lt;html&gt;</code> element, making your entire page's typography and spacing consistent and accessible.
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">h1 { font-size: 2rem; }</code>
+        <code class="main-code">p { font-size: 1rem; margin-bottom: 1.5rem; }</code>
+        <p class="explanation">
+          <em>(Note: By default in most browsers, <code>1rem = 16px</code>, so <code>2rem = 32px</code> and <code>0.5rem = 8px</code>. Using <code>rem</code> for font sizes is a best practice because it respects the user's browser zoom and font settings.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>em (Relative to Parent Font Size):</strong> Scales relative to the <code>font-size</code> of its direct parent element (or its own font size if used for padding/margin).
+      <div class="example-box">
+        <strong>Example:</strong>
+        <code class="main-code">.btn { font-size: 16px; padding: 0.5em 1.2em; }</code>
+        <p class="explanation">
+          <em>(Note: In this button example, <code>0.5em</code> equals <code>8px</code> and <code>1.2em</code> equals <code>19.2px</code>. If you increase the button's <code>font-size</code> later, the padding grows automatically with it.)</em>
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <strong>vw &amp; vh (Viewport Width &amp; Viewport Height):</strong> Sets sizes relative to the visible browser window (screen) size, where <code>1vw</code> = 1% of screen width and <code>1vh</code> = 1% of screen height.
+      <div class="example-box">
+        <strong>Examples:</strong>
+        <code class="main-code">.hero-banner { width: 100vw; height: 100vh; }</code>
+        <code class="main-code">.half-screen { height: 50vh; }</code>
+        <p class="explanation">
+          <em>(Note: <code>100vh</code> makes a section cover the entire visible screen height from top to bottom, which is very popular for full-screen landing page hero sections.)</em>
+        </p>
+      </div>
+    </li>
+  </ul>
+</section>
+
     </main>
   </body>
 </html>
